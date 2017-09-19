@@ -1,0 +1,45 @@
+global-styling:
+  version: 8.0.0
+  css:
+    base:
+      css/bootstrap.min.css: {}
+      css/ripples.min.css: {}
+      css/main.css: {}
+      css/responsive.css: {}
+      css/animate.min.css: {}
+      css/normalize.css: {}
+      css/ion.rangeSlider.css: {}            
+      css/ion.rangeSlider.skinHTML5.css: {}     
+      css/ion.rangeSlider.skinFlat.css: {}                  
+      css/reset.css: {}
+      css/style.css: {}      
+      
+  js:
+    js/wow.js: {}
+    js/custom.js: {}
+    js/modernizr.js: {}
+    js/jquery.mixitup.min.js: {}
+    js/ion.rangeSlider.js: {}
+    js/main.js: {}
+    js/jquery.nav.js: {}
+    js/classie.js: {}
+    js/classie.js: {}
+    js/init.js: {}
+    
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+skins-menu:
+  version: 1.x
+
+  js:
+    assets/includes/skins-menu/skins_menu.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

@@ -1,0 +1,35 @@
+name: school
+description:  custom theme based on MD Bootstrep. 
+type: theme
+base theme: materialize
+core: 8.x
+
+libraries:  
+  - school/global-styling  
+  
+regions:
+  top:    Top Header
+  top_bottom: Top Bottom
+  header:     Header
+  homepagebanner: Home Page Banner
+  user_nav: User navigation
+  highlight: Highlighted
+  help: Help
+  content:         Content
+  page_bottom:     page bottom
+  sidebar_first:   Sidebar first
+  sidebar_second:  Sidebar second
+  content_bottom1: Content Bottom 1
+  content_bottom2: Content Bottom 2
+  content_bottom3: Content Bottom 3
+  content_bottom:  Content Bottom
+  footer_second:  Footer Second
+  footer_third:   Footer Third
+  footer_forth:   Footer Fourth
+  footer_fifth:   Footer Fifth
+  social_share:   Social Share
+  news_letter :   News Letter
+  GotoTop:        Go To Top
+  model_popup :   model popup
+  footer:         Footer
+
