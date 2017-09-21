@@ -1,7 +1,6 @@
 name: school
 description:  custom theme based on MD Bootstrep. 
 type: theme
-base theme: materialize
 core: 8.x
 
 libraries:  

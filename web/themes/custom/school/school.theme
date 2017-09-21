@@ -1,0 +1,34 @@
+<?php
+/**
+ * Override or insert variables into the page template.
+ */
+use Drupal\block\Entity\Block;
+use Drupal\Core\Menu; 
+
+function school_preprocess_page(&$vars, $hook) {
+    
+    $site_config = \Drupal::config('system.site');
+    $vars['logo'] = theme_get_setting('logo.url');
+    
+    //$menu = Block::load('mainnavigation');
+    //$vars['main_menu'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($menu);       
+    // main menu tree with sub-links.
+ 
+    $menu_tree = Drupal::menuTree();
+    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters('main');
+    $parameters->setTopLevelOnly();
+    $main_menu_top_level = $menu_tree->load('main', $parameters);
+    
+    echo "<pre>";
+    print_r($main_menu_top_level); exit;
+
+
+}
+
+/**
+ * Theme wrapper function for the primary menu links.
+ */
+function school_menu_tree__primary(&$vars) {
+  return '<ul class="toggle-menu">'.$vars['tree'].'</ul>';
+}
+

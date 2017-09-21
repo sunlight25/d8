@@ -1,17 +1,17 @@
-<div class="page" class="page" {{ page_css |raw }}>
+<div id="page" class="page" {{ page_css |raw }}>
 
 {% if page.show_skins_menu %}
     {{ page.show_skins_menu |raw }}
 {% endif %}
-  
+ 
 <a name="Top" id="Top"></a>
 <div class="navbar navbar-invers menu-wrap">        
         <div class="navbar-header text-center">
-            {% if logo %}
-                <a class="brand-logo navbar-brand logo-right" href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-                  <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-               </a>               
-           {% endif %}                        
+            {% if site_logo %}
+                <a id="logo" href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="brand-logo navbar-brand logo-right">
+                  <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
+                </a>
+            {% endif %}            
         </div>
         {% if page.top_bottom %}
             <div class="top">
@@ -30,14 +30,11 @@
                 <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
             </a>
         {% endif %}        
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-       {% if main_menu or secondary_menu %}
-        <nav id="navigation" class="hide-on-med-and-down main-menu" >
-          <div class="container">
-            {{ main_menu }}
-            {{ secondary_menu }}
-          </div>
-        </nav>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>        
+       {% if main_menu %}
+        <div id="navigation" class="hide-on-med-and-down main-menu" >          
+            {{ main_menu }}            
+        </div>
         {% endif %}       
     </div>
     {% if page.top %}    
@@ -165,9 +162,9 @@
       <div class="container footer-copyright">
       <div class="container row">            	
       	<div class="col-md-12"> 
-            <?php if (!empty($page['footer'])): ?>                           
-                <?php print render($page['footer']); ?>                
-            <?php endif; ?>
+            {% if page.footer %}            
+                {{ page.footer }}
+            {% endif %}
         </div>
       </div>
     </div>
