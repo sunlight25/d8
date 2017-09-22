@@ -14,13 +14,42 @@ function school_preprocess_page(&$vars, $hook) {
     //$vars['main_menu'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($menu);       
     // main menu tree with sub-links.
  
-    $menu_tree = Drupal::menuTree();
+    /*$menu_tree = Drupal::menuTree();
     $parameters = $menu_tree->getCurrentRouteMenuTreeParameters('main');
     $parameters->setTopLevelOnly();
-    $main_menu_top_level = $menu_tree->load('main', $parameters);
+    $main_menu_top_level = $menu_tree->load('main', $parameters);*/
     
-    echo "<pre>";
-    print_r($main_menu_top_level); exit;
+    $menu_tree = \Drupal::menuTree();
+    $menu_name = 'main';
+
+    // Build the typical default set of menu tree parameters.
+    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+
+    // Load the tree based on this set of parameters.
+    $tree = $menu_tree->load($menu_name, $parameters);
+
+    // Transform the tree using the manipulators you want.
+    $manipulators = array(
+      // Only show links that are accessible for the current user.
+      array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+      // Use the default sorting of menu links.
+      array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+    );
+    
+    
+    $tree = $menu_tree->transform($tree, $manipulators);
+   
+    // Finally, build a renderable array from the transformed tree.    
+    $menu = $menu_tree->build($tree);
+    $menu['#attributes']['class'][] = 'menu';
+    $menu_html = drupal_render($menu);
+    $vars['menu'] =$menu_html;
+    
+    //$menu_tree_service = \Drupal::service('menu.link_tree');
+    //$tree = $menu_tree_service->load('main', $parameters);
+    
+    //echo "<pre>";
+    //print_r($menu_html); exit;
 
 
 }

@@ -1,185 +1,230 @@
 <div id="page" class="page" {{ page_css |raw }}>
 
-{% if page.show_skins_menu %}
-    {{ page.show_skins_menu |raw }}
-{% endif %}
- 
-<a name="Top" id="Top"></a>
-<div class="navbar navbar-invers menu-wrap">        
+    {% if page.show_skins_menu %}
+        {{ page.show_skins_menu |raw }}
+    {% endif %}
+
+    <a name="Top" id="Top"></a>
+    <div class="navbar navbar-invers menu-wrap">        
         <div class="navbar-header text-center">
             {% if site_logo %}
                 <a id="logo" href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="brand-logo navbar-brand logo-right">
-                  <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
+                    <img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
                 </a>
             {% endif %}            
         </div>
         {% if page.top_bottom %}
             <div class="top">
-               {{ page.top_bottom }}						
+                {{ page.top_bottom }}						
             </div>    
             <button class="close-button" id="close-button">Close Menu</button>
-       {% endif %}                   
-</div>
+        {% endif %}                   
+    </div>
 
-<nav class="dark-red" id="nav" role="navigation">
-      <!-- teal lighten-1 -->
-    <div class="nav-wrapper container-fluid">      
-    <div class="navbar-left">
-        {% if logo %}
-            <a class="brand-logo" href="{{ front_page }}" title="{{ 'Home'|t }}">      
-                <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-            </a>
-        {% endif %}        
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>        
-       {% if main_menu %}
-        <div id="navigation" class="hide-on-med-and-down main-menu" >          
-            {{ main_menu }}            
-        </div>
-        {% endif %}       
-    </div>
-    {% if page.top %}    
-        <div class="navbar-right">
-            {{ page.top }}          
-        </div>
-    {% endif %}     
-    <button class="menu-icon" id="open-button" style="color:#ffffff !important;">
-        <i class="mdi-navigation-menu"><img src="/img/menu-icon.png" /></i>
-    </button>                 
-    </div>
-  </nav> 
-<div id="school-list" class="content-wrap">  
-    {% if page.header %}
-        <div class="top">
-           {{ page.header }}						
-        </div>    
-    {% endif %}   
-    {% if page.homepagebanner %}
-       {{ page.homepagebanner }}
-    {% endif %}           
-    {% if messages %}
-          <section id="messages" class="messages">
-            <div class="container">
-              {{ messages }}
+    <nav class="dark-red" id="nav" role="navigation">
+        <!-- teal lighten-1 -->
+        <div class="nav-wrapper container-fluid">      
+            <div class="navbar-left">
+                {% if logo %}
+                    <a class="brand-logo" href="{{ front_page }}" title="{{ 'Home'|t }}">      
+                        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+                    </a>
+                {% endif %}        
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>        
+                {% if menu %}
+                    <div id="navigation" class="hide-on-med-and-down main-menu" >          
+                        {{ menu }}            
+                    </div>
+                {% endif %}                 
             </div>
-          </section>
-        {% endif %}
-
-      {% if page.help %}
-        <section id="help" class="help">
-          <div class="container">
-            {{ page.help }}
-          </div>
-        </section>
-      {% endif %}    
-  <div>
-  <section id="main" class="main" role="main">
-    <a id="main-content"></a>
-    <div class="container">
-      <div class="row">
-        
-        {% if page.sidebar_first %}
-          <aside class="sidebar-first sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
-		
-        <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
-          {{ page.highlighted }}
-
-          {{ title_prefix }}
-          {% if title %}
-            <h1>{{ title }}</h1>
-          {% endif %}
-          {{ title_suffix }}
-
-          {{ tabs }}
-
-          {% if action_links %}
-            <nav class="action-links">{{ action_links }}</nav>
-          {% endif %}
-
-          {{ page.content }}
-
-          <!--{{ feed_icons }}-->
+            <div class="navbar-right">
+                    <div class="region region-top">
+                        <section id="block-views-exp-multi-search-page-1" class="block block-views block-search-top-bar-menu top-search-left clearfix">                            
+                            <div>
+                                <div class="container content">                                    
+                                    <form onsubmit="return false" action="/multi-search" method="get" id="views-exposed-form-multi-search-page-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+                                                <div class="views-exposed-widgets clearfix">
+                                                    <div id="edit-title-top-menu-search-wrapper" class="views-exposed-widget views-widget-filter-title">
+                                                        <div class="views-widget">
+                                                            <div class="form-item input-field form-type-textfield form-item-title" role="application">
+                                                                <input class="views-ac-dependent-filter form-text form-autocomplete" value="Search for Schools" onblur="if (this.value == & quot; & quot; ) this.value = & quot; Search for Schools & quot;" onfocus="if (this.value == & quot; Search for Schools & quot; ) this.value = & quot; & quot;" id="edit-title-top-menu-search" name="title" size="30" maxlength="128" autocomplete="OFF" aria-autocomplete="list" type="text"><input id="edit-title-top-menu-search-autocomplete" value="http://www.ukschool.net/index.php?q=ukschoolautocomplete/multi_search" disabled="disabled" class="autocomplete autocomplete-processed" type="hidden">
+                                                                <span class="element-invisible" aria-live="assertive" id="edit-title-top-menu-search-autocomplete-aria-live"></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="views-exposed-widget views-submit-button">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>    
+                                </div>
+                            </div>
+                        </section> <!-- /.block -->
+                        <div id="block-locale-language" class="block block-locale language switcher">
+                            <!--h2 class="collection-header"></h2-->
+                            <div>
+                                <!--a class="element-invisible">Block content</a-->
+                                <div class="hide-on-med-and-down">
+                                    <ul class="menu">
+                                        <li class="first last expanded dropdown" id="user-menu">
+                                            <a class="collection-item menu-act"><img src="/sites/all/themes/ukschool/img/globe.png"></a> 
+                                            <ul class="language-switcher-locale-url dropdown-content  last-menu"><li class="zh-hans first"><a href="/zh-hans" class="language-link expanded dropdown dropdown-content" xml:lang="zh-hans">简体中文</a></li>
+                                                <li class="en last active"><a href="/" class="language-link expanded dropdown dropdown-content active" xml:lang="en">English</a></li>
+                                            </ul>                    </li>
+                                    </ul></div>                       
+                            </div>
+                        </div> <!-- /.block -->
+                        <div id="block-block-1" class="block block-block top-search-right">
+                            <div class="block-content">
+                                <ul class="menu">
+                                    <li class="first"><a href="/user/login">Login</a></li>
+                                </ul>    </div>
+                        </div> <!-- /.block -->
+                    </div>
+                </div>
+            {% if page.top %}    
+                <div class="navbar-right">
+                    {{ page.top }}          
+                </div>
+            {% endif %}     
+            <button class="menu-icon" id="open-button" style="color:#ffffff !important;">
+                <i class="mdi-navigation-menu"><img src="/img/menu-icon.png" /></i>
+            </button>                 
         </div>
-
-        {% if page.sidebar_second %}
-          <aside class="sidebar-second sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
-            {{ page.sidebar_second }}
-          </aside>
+    </nav> 
+    <div id="school-list" class="content-wrap">  
+        {% if page.header %}
+            <div class="top">
+                {{ page.header }}						
+            </div>    
+        {% endif %}   
+        {% if page.homepagebanner %}
+            {{ page.homepagebanner }}
+        {% endif %}           
+        {% if messages %}
+            <section id="messages" class="messages">
+                <div class="container">
+                    {{ messages }}
+                </div>
+            </section>
         {% endif %}
-      </div>
-    </div>
-  </section>
- </div>                 
-  {% if page.content_bottom1 %}    
-       {{ page.content_bottom1 }}          
-  {% endif %}
-  {% if page.content_bottom2 %}    
-       {{ page.content_bottom2 }}          
-  {% endif %}
-  {% if page.content_bottom3 %}    
-       {{ page.content_bottom3 }}          
-  {% endif %}
-  {% if page.content_bottom %}    
-       {{ page.content_bottom }}          
-  {% endif %}
-   <section id="footer">
- {% if page.footer %}             
-    <div class="container">
-      <div class="row">            
-        <div class="col-md-5 col-sm-12 col-xs-12 bor-right footer-minheight">
-            {% if page.footer_first %} 
-                {{ page.footer_first}}                  
-            {% endif %}
-        </div>                    
-        <div class="col-md-2 col-sm-12 col-xs-12 bor-right footer-minheight">
-            {% if page.footer_third %} 
-                {{ page.footer_third }}                  
-            {% endif %}            
-        </div>        
-        <div class="col-md-2 col-sm-12 col-xs-12 bor-right footer-minheight">
-            {% if page.footer_forth %} 
-                {{ page.footer_forth }}                  
-            {% endif %}            
-        </div>        
-        <div class="col-md-3 col-sm-12 col-xs-12 footer-minheight">
-          {% if page.footer_fifth %}               
-                  {{ page.footer_fifth }}
-            {% endif %}
-        </div>                
-      </div>
-  </div>    
-  {% endif %}    
-    <!-- Go to Top Link -->
-    <div id="back-to-top-block">
-        <a href="#home" class="btn-primary back-to-top">
-         <i class="fa fa-chevron-up"></i>
-       </a>
-   <div>  
-   </section> 
-    <section id="copyright">    
-      <div class="container footer-copyright">
-      <div class="container row">            	
-      	<div class="col-md-12"> 
-            {% if page.footer %}            
-                {{ page.footer }}
-            {% endif %}
-        </div>
-      </div>
-    </div>
- </section>     
-    {% if page.model_popup %}     
-    <a href="#modal2" id="open-model-compare" class="compare-school">{{ 'Compare'|t }}</a>
-    <div id="modal2" class="modal">                   
-        <div class="modal-content">    		                                                                            
-            {{ page.model_popup }}            
-          <div class="modal-footer border-none">		                                        
-            <a class="btn btn-lg btn-primary mr15 modal-action modal-close">{{ 'Close'|t }}</a>            
-        </div> 
-        </div>	 	
-        
-    </div>             
-    {% endif %}   
-</div>
-</div>
+
+        {% if page.help %}
+            <section id="help" class="help">
+                <div class="container">
+                    {{ page.help }}
+                </div>
+            </section>
+        {% endif %}    
+        <div>
+            <section id="main" class="main" role="main">
+                <a id="main-content"></a>
+                <div class="container">
+                    <div class="row">
+
+                        {% if page.sidebar_first %}
+                            <aside class="sidebar-first sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+                                {{ page.sidebar_first }}
+                            </aside>
+                        {% endif %}
+
+                        <div class="content col-lg-{{ page.main_content_width }} col-md-{{ page.main_content_width }} col-sm-12 col-xs-12">
+                            {{ page.highlighted }}
+
+                            {{ title_prefix }}
+                            {% if title %}
+                                <h1>{{ title }}</h1>
+                            {% endif %}
+                            {{ title_suffix }}
+
+                            {{ tabs }}
+
+                            {% if action_links %}
+                                <nav class="action-links">{{ action_links }}</nav>
+                                {% endif %}
+
+                            {{ page.content }}
+
+                            <!--{{ feed_icons }}-->
+                        </div>
+
+                        {% if page.sidebar_second %}
+                            <aside class="sidebar-second sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" role="complementary">
+                                {{ page.sidebar_second }}
+                            </aside>
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+        </div>                 
+        {% if page.content_bottom1 %}    
+            {{ page.content_bottom1 }}          
+        {% endif %}
+        {% if page.content_bottom2 %}    
+            {{ page.content_bottom2 }}          
+        {% endif %}
+        {% if page.content_bottom3 %}    
+            {{ page.content_bottom3 }}          
+        {% endif %}
+        {% if page.content_bottom %}    
+            {{ page.content_bottom }}          
+        {% endif %}
+        <section id="footer">
+            {% if page.footer %}             
+                <div class="container">
+                    <div class="row">            
+                        <div class="col-md-5 col-sm-12 col-xs-12 bor-right footer-minheight">
+                            {% if page.footer_first %} 
+                                {{ page.footer_first}}                  
+                            {% endif %}
+                        </div>                    
+                        <div class="col-md-2 col-sm-12 col-xs-12 bor-right footer-minheight">
+                            {% if page.footer_third %} 
+                                {{ page.footer_third }}                  
+                            {% endif %}            
+                        </div>        
+                        <div class="col-md-2 col-sm-12 col-xs-12 bor-right footer-minheight">
+                            {% if page.footer_forth %} 
+                                {{ page.footer_forth }}                  
+                            {% endif %}            
+                        </div>        
+                        <div class="col-md-3 col-sm-12 col-xs-12 footer-minheight">
+                            {% if page.footer_fifth %}               
+                                {{ page.footer_fifth }}
+                            {% endif %}
+                        </div>                
+                    </div>
+                </div>    
+            {% endif %}    
+            <!-- Go to Top Link -->
+            <div id="back-to-top-block">
+                <a href="#home" class="btn-primary back-to-top">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <div>  
+                    </section> 
+                    <section id="copyright">    
+                        <div class="container footer-copyright">
+                            <div class="container row">            	
+                                <div class="col-md-12"> 
+                                    {% if page.footer %}            
+                                        {{ page.footer }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </section>     
+                    {% if page.model_popup %}     
+                        <a href="#modal2" id="open-model-compare" class="compare-school">{{ 'Compare'|t }}</a>
+                        <div id="modal2" class="modal">                   
+                            <div class="modal-content">    		                                                                            
+                                {{ page.model_popup }}            
+                                <div class="modal-footer border-none">		                                        
+                                    <a class="btn btn-lg btn-primary mr15 modal-action modal-close">{{ 'Close'|t }}</a>            
+                                </div> 
+                            </div>	 	
+
+                        </div>             
+                    {% endif %}   
+                </div>
+            </div>

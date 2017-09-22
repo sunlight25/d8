@@ -2,9 +2,9 @@ global-styling:
   version: VERSION
   css:
     component:
-      css/materialize.css: { weight: -12 }
-      css/drupal-materialize.css: { weight: -11 }
-      css/drupal-toolbar.css: { weight: -10 }
+      css/materialize.css: {}
+      css/drupal-materialize.css: {}
+      css/drupal-toolbar.css: {}
 #    fonts:
 #      'https://fonts.googleapis.com/icon?family=Material+Icons': { type: external }
 

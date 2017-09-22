@@ -12,6 +12,7 @@
             <file>file:/var/www/html/d8/web/themes/custom/school/school.theme</file>
             <file>file:/var/www/html/d8/web/core/includes/theme.inc</file>
             <file>file:/var/www/html/d8/web/themes/custom/school/school.info.yml</file>
+            <file>file:/var/www/html/d8/web/core/modules/system/tests/modules/plugin_test/src/Plugin/plugin_test/mock_block/MockMenuBlockDeriver.php</file>
             <file>file:/var/www/html/d8/web/themes/custom/school/school.libraries.yml</file>
             <file>file:/var/www/html/d8/web/core/profiles/standard/config/install/block.block.bartik_main_menu.yml</file>
             <file>file:/var/www/html/d8/web/themes/contrib/zircon/assets/includes/skins-menu/skins_menu.inc</file>

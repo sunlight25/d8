@@ -1150,3 +1150,12 @@ padding: 1.2em 0em;
 	margin-left: 50px;
 }
 }
+nav .brand-logo {
+    position: absolute;
+    float: left;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+}
