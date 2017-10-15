@@ -1,0 +1,5 @@
+name: Site Info
+description: Add a Custom field in Site information.
+core: 8.x
+package: Custom
+type: module

@@ -765,7 +765,7 @@ $settings['file_scan_ignore_directories'] = [
 # }
 $config_directories['sync'] = '../config/sync';
 $databases['default']['default'] = array (
-  'database' => 'd8',
+  'database' => 'school-d8',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',

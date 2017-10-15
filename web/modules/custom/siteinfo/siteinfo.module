@@ -1,0 +1,64 @@
+<?php
+/*
+ * @file
+ * code for siteinfo module
+*/
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function siteinfo_form_system_site_information_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    $site_config = \Drupal::config('system.site');
+
+    $siteapikey = $site_config->get('siteapikey');
+    ($siteapikey)? $siteapikey : $siteapikey = 'No API Key yet';
+
+    $form['specifics'] = [
+        '#type' => 'details',
+        '#title' => t('Specifics'),
+        '#open' => TRUE,
+    ];
+    $form['specifics']['siteapikey'] = [
+        '#type' => 'textfield',
+        '#title' => t('Site API Key'),
+        '#default_value' => $siteapikey,
+        '#size' => 30,
+        '#description' => t('Here We are store API key'),
+    ];
+
+    // Add a custom submit handler to save the array of types back to the config file.
+    $form['actions']['submit']['#submit'][] = 'siteinfo_action_submit';
+
+    ($siteapikey)? $form['actions']['submit']['#value'] = t('Update Configuration') : $form['actions']['submit']['#value'];
+
+
+}
+
+/**
+ * custom submit handler to save the API Key to the config file.
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function siteinfo_action_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    $site_config = \Drupal::config('system.site');
+    $siteapikey_old = $site_config->get('siteapikey');
+
+    $siteAPIKey = $form_state->getValue('siteapikey');
+    $config = \Drupal::service('config.factory')->getEditable('system.site');
+     $config->set('siteapikey', $siteAPIKey)
+            ->set('name', $form_state->getValue('site_name'))
+        ->set('mail', $form_state->getValue('site_mail'))
+        ->set('slogan', $form_state->getValue('site_slogan'))
+        ->set('page.front', $form_state->getValue('site_frontpage'))
+        ->set('page.403', $form_state->getValue('site_403'))
+        ->set('page.404', $form_state->getValue('site_404'))
+        ->save();
+
+    drupal_set_message('The configuration options have been saved.');
+    if($siteAPIKey!='No API Key yet' && $siteAPIKey!=$siteapikey_old) {
+        drupal_set_message('Site API Key has been saved with '.$siteAPIKey.' value');
+    }
+}

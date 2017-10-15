@@ -1,0 +1,8 @@
+siteinfo.content:
+  path: '/siteinfo/{API_key}/{nid}'
+  defaults:
+    _controller: '\Drupal\siteinfo\Controller\PageNodeController::content'
+    _title: 'Get Page Node'
+  requirements:
+    _permission: 'access content'
+
