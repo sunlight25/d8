@@ -1,0 +1,22 @@
+uuid: cb12290d-95e8-4b95-9efd-a64dfd5fab5b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - school
+_core:
+  default_config_hash: gbD2-sPon8wyH_EhrCDOB-hhmjhWr1AoMxowKPzfcF0
+id: school_powered
+theme: school
+region: top
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

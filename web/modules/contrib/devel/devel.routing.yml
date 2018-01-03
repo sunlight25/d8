@@ -276,3 +276,12 @@ devel.entity_info_page.detail:
     _admin_route: TRUE
   requirements:
     _permission: 'access devel information'
+
+devel.default_form:
+  path: '/devel/form/default'
+  defaults:
+    _form: '\Drupal\devel\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+  

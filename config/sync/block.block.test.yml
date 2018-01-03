@@ -1,0 +1,31 @@
+uuid: ae3dcbd5-cb74-4e15-ba3b-0589768d9201
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:db69a402-83c7-4ca1-a24a-40e26f31d0c8'
+  module:
+    - block_content
+    - system
+  theme:
+    - school
+id: test
+theme: school
+region: homepagebanner
+weight: -6
+provider: null
+plugin: 'block_content:db69a402-83c7-4ca1-a24a-40e26f31d0c8'
+settings:
+  id: 'block_content:db69a402-83c7-4ca1-a24a-40e26f31d0c8'
+  label: 'Home Page Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

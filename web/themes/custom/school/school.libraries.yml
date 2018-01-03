@@ -2,7 +2,7 @@ global-styling:
   version: 8.0.0
   css:
     base:
-      css/bootstrap.min.css: {}
+      css/bootstrap.min.css: {weight: 5}
       css/ripples.min.css: {}
       css/main.css: {}
       css/responsive.css: {}

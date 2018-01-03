@@ -1,0 +1,13 @@
+name : 'Simple Field Formatter'
+type: module
+description : 'Simple Field Display Formatter'
+# core : 8.x
+package : Field Formatters
+dependencies:
+ - field
+
+# Information added by Drupal.org packaging script on 2016-03-16
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'simple_field_formatter'
+datestamp: 1458153924

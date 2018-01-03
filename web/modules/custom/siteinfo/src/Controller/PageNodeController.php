@@ -20,7 +20,14 @@ class PageNodeController extends ControllerBase {
      * {@inheritdoc}
      */
     public function content($API_key,$nid) {
-        $site_config = \Drupal::config('system.site');
+
+	 return [
+	      '#theme' => 'my_template',
+	      '#test_var' => $this->t('Test Value'),
+	    ];
+
+
+        /*$site_config = \Drupal::config('system.site');
         $siteapikey = $site_config->get('siteapikey');
         if ($API_key!=$siteapikey) {
             throw new AccessDeniedHttpException();
@@ -50,8 +57,8 @@ class PageNodeController extends ControllerBase {
             } else{
                 echo 'Record not found';
             }
-            exit;
-        }
+            //exit;
+        }*/
     }
 
 }

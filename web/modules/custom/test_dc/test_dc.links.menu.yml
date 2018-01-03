@@ -1,0 +1,18 @@
+
+# Test entity menu items definition
+entity.test_entity.collection:
+  title: 'Test entity list'
+  route_name: entity.test_entity.collection
+  description: 'List Test entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Test entity type menu items definition
+entity.test_entity_type.collection:
+  title: 'Test entity type'
+  route_name: entity.test_entity_type.collection
+  description: 'List Test entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

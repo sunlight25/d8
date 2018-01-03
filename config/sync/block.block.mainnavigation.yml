@@ -1,0 +1,24 @@
+uuid: 57576845-8905-4f64-9a4c-1f4ef136a387
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - school
+id: mainnavigation
+theme: school
+region: top_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

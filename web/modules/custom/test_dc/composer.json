@@ -1,0 +1,14 @@
+{
+  "name": "drupal/test_dc",
+  "type": "drupal-module",
+  "description": "Display a message when a user logs in",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/test_dc",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/test_dc",
+    "source": "http://cgit.drupalcode.org/test_dc"
+  },
+  "require": { }
+}

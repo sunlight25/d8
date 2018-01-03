@@ -1,0 +1,26 @@
+uuid: 12973a03-4c5d-4257-989a-5b087626c624
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - materialize
+_core:
+  default_config_hash: I1lBF0Zs41cIx-MuqJheiHFNBJIQlPQc5e2lO8Tz5hw
+id: materialize_main_menu
+theme: materialize
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

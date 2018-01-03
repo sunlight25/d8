@@ -1,0 +1,22 @@
+uuid: 4d88529f-22e3-4e26-9f52-af0894b11949
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - materialize
+_core:
+  default_config_hash: VStO8y6zdIUsByV5ILgeKmduBF0Rlfe0IiJqZeDu7hA
+id: materialize_search
+theme: materialize
+region: top_nav
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

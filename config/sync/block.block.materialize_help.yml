@@ -1,0 +1,22 @@
+uuid: 955bc2a2-4e79-4b37-bc30-061956630786
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - materialize
+_core:
+  default_config_hash: pNWHLidiaBqVzgTNrgp_brVkgOSpjJO5GJbHnOhiNGc
+id: materialize_help
+theme: materialize
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,9 @@
+
+test_dc.info_form:
+  path: '/test_dc/form/info'
+  defaults:
+    _form: '\Drupal\test_dc\Form\InfoForm'
+    _title: 'InfoForm'
+  requirements:
+    _access: 'TRUE'
+  

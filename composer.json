@@ -20,10 +20,12 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/awesome_zymphonies_theme": "^1.0",
-        "drupal/console": "^1.0.1",
+        "drupal/console": "@stable",
         "drupal/core": "~8.0",
         "drupal/devel": "~1.0",
         "drupal/showcase_lite": "^1.0",
+        "drupal/simple_field_formatter": "^1.0",
+        "drupal/views_data_export": "1.x-dev",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

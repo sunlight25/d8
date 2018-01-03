@@ -1,0 +1,22 @@
+uuid: 7b126bf3-4f66-42ae-95c2-d5c52e344818
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - materialize
+_core:
+  default_config_hash: Ni_6AQqtw3rCYc-VLnnKAPPxWyVFqFVgbMdn4PyRQ88
+id: materialize_content
+theme: materialize
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

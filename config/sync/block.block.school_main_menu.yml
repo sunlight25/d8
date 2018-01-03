@@ -1,0 +1,26 @@
+uuid: fe5686a1-a591-49f3-9722-85349daf5572
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - school
+_core:
+  default_config_hash: I1lBF0Zs41cIx-MuqJheiHFNBJIQlPQc5e2lO8Tz5hw
+id: school_main_menu
+theme: school
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 766ed4b9-d410-4563-b02e-a5897644c451
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - materialize
+_core:
+  default_config_hash: HewqczZRLp93kcLkmkxv6wMPQPyAPF_My9XIyqbeAvw
+id: materialize_breadcrumbs
+theme: materialize
+region: top_nav
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,33 @@
+add test entity entities:
+  title: 'Create new Test entity entities'
+
+administer test entity entities:
+  title: 'Administer Test entity entities'
+  description: 'Allow to access the administration form to configure Test entity entities.'
+  restrict access: true
+
+delete test entity entities:
+  title: 'Delete Test entity entities'
+
+edit test entity entities:
+  title: 'Edit Test entity entities'
+
+access test entity overview:
+  title: 'Access the Test entity overview page'
+
+view published test entity entities:
+  title: 'View published Test entity entities'
+
+view unpublished test entity entities:
+  title: 'View unpublished Test entity entities'
+
+view all test entity revisions:
+  title: 'View all Test entity revisions'
+
+revert all test entity revisions:
+  title: 'Revert all Test entity revisions'
+  description: 'Role requires permission <em>view Test entity revisions</em> and <em>edit rights</em> for test entity entities in question or <em>administer test entity entities</em>.'
+
+delete all test entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Test entity revisions</em> and <em>delete rights</em> for test entity entities in question or <em>administer test entity entities</em>.'

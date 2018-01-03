@@ -1,0 +1,25 @@
+uuid: 6dc5c6b2-5600-4ebc-9742-7506ccc04d89
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - materialize
+_core:
+  default_config_hash: mSM1HPxqcTV3eX1XbEgZdxS7s0glOCIO6h9yCRnW84Q
+id: materialize_branding
+theme: materialize
+region: top_nav
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

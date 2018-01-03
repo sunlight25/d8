@@ -1,0 +1,18 @@
+uuid: d036c9b1-7b1f-4e6e-bba6-db6bd29b9578
+langcode: en
+status: true
+dependencies:
+  theme:
+    - school
+id: pagetitle
+theme: school
+region: homepagebanner
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

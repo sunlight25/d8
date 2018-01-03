@@ -1,0 +1,5 @@
+name: test_dc
+type: module
+description: Display a message when a user logs in
+core: 8.x
+package: custom

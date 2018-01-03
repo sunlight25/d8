@@ -1,0 +1,31 @@
+uuid: 047b9edc-2b92-4250-bbce-4952e22ca368
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5b6350b0-78ad-47d0-b7d7-a7d03fa24f5e'
+  module:
+    - block_content
+    - system
+  theme:
+    - school
+id: getstartedhomepagelink
+theme: school
+region: homepagebanner
+weight: -5
+provider: null
+plugin: 'block_content:5b6350b0-78ad-47d0-b7d7-a7d03fa24f5e'
+settings:
+  id: 'block_content:5b6350b0-78ad-47d0-b7d7-a7d03fa24f5e'
+  label: 'Get Started Home Page Link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
